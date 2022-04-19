@@ -1,0 +1,18 @@
+.movie-card {
+  color: white;
+  width: 500px;
+  height: 350px;
+  padding: 30px;
+  transition: transform 100ms ease-out;
+}
+.movie-card > img {
+  width: 400px;
+  object-fit: contain;
+}
+
+.movie-card:hover {
+  transform: scale(1.09);
+}
+.movie-card > h2 {
+  padding: 10px 0 2px 0;
+}

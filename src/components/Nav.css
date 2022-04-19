@@ -4,13 +4,15 @@
   align-items: center;
   justify-content: space-between;
   overflow-x: auto;
+  padding: 20px 5px;
 }
 .nav > h2 {
   margin-right: 30px;
   padding: 5px 20px;
   opacity: 0.7;
-  transition: transform 5ms ease;
+  transition: transform 50ms ease-out;
   cursor: pointer;
+  font-size: medium;
 }
 .nav > h2:hover {
   opacity: 1;

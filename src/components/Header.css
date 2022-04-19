@@ -1,7 +1,7 @@
 .header {
   display: flex;
   color: whitesmoke;
-  background-color: black;
+
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;

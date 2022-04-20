@@ -8,6 +8,8 @@ import {
   topRatedMoviesEndpoint,
 } from "../api/fetchApi";
 import "./Movies.css";
+import FlipMove from "react-flip-move";
+import { Flip } from "@material-ui/icons";
 const API_KEY = process.env.REACT_APP_API_KEY;
 const Movies = () => {
   const { movies, url, setMovies, setUrl } = useContext(MovieContext);
@@ -17,9 +19,11 @@ const Movies = () => {
   console.log(movies);
   return (
     <div className="movies">
-      {movies.map((movie) => (
-        <MovieCard movie={movie} key={movie.id} />
-      ))}
+      <FlipMove className="movies">
+        {movies.map((movie) => (
+          <MovieCard movie={movie} key={movie.id} />
+        ))}
+      </FlipMove>
     </div>
   );
 };

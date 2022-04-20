@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 .app {
-  width: 100vw;
-
+  width: 100%;
+  background-size: cover;
   background-image: linear-gradient(to right, #051421, #042727);
 }

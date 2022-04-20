@@ -1,4 +1,5 @@
-import React from "react";
+import { useContext } from "react";
+import MoviesContext from "../context/MoviesContext";
 import "./Nav.css";
 const navItems = [
   { name: "Trending" },

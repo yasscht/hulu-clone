@@ -3,12 +3,10 @@ import "./MovieCard.css";
 const MovieCard = ({
   movie: { title, overview, popularity, backdrop_path },
 }) => {
+  const base_url = "https://image.tmdb.org/t/p/original";
   return (
     <div className="movie-card">
-      <img
-        src="https://fr.web.img6.acsta.net/r_654_368/newsv7/21/02/26/18/51/4272278.jpg"
-        alt=""
-      />{" "}
+      <img src={`${base_url}${backdrop_path}`} alt="" />{" "}
       <p>
         {overview.length > 60
           ? overview.substring(0, 60).concat("...")

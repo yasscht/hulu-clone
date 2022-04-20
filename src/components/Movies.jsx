@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import MovieCard from "./kit/MovieCard";
 import axios from "axios";
-
+import { MovieContext } from "../context/MovieContext";
 import {
   fetchApi,
   trendingMoviesEndpoint,
@@ -10,11 +10,10 @@ import {
 import "./Movies.css";
 const API_KEY = process.env.REACT_APP_API_KEY;
 const Movies = () => {
-  const [movies, setMovies] = useState([]);
-  const [url, setUrl] = useState(trendingMoviesEndpoint);
+  const { movies, url, setMovies, setUrl } = useContext(MovieContext);
   useEffect(() => {
     fetchApi(url).then((response) => setMovies(response.results));
-  }, []);
+  }, [url]);
   console.log(movies);
   return (
     <div className="movies">

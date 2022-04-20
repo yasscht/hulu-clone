@@ -16,3 +16,9 @@
 .movie-card > h2 {
   padding: 10px 0 2px 0;
 }
+.movie-card__likes {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

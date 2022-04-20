@@ -1,7 +1,8 @@
 import React from "react";
+import ThumbUpIcon from "@material-ui/icons/ThumbUp";
 import "./MovieCard.css";
 const MovieCard = ({
-  movie: { title, overview, popularity, backdrop_path },
+  movie: { title, overview, popularity, backdrop_path, first_air_date },
 }) => {
   const base_url = "https://image.tmdb.org/t/p/original";
   return (
@@ -13,7 +14,11 @@ const MovieCard = ({
           : overview}
       </p>
       <h2>{title ? title : "No result found"}</h2>
-      <p>{Math.round(popularity)}</p>
+      <div className="movie-card__likes">
+        <span>{Math.round(popularity)}</span>
+        <ThumbUpIcon />
+      </div>
+      <div>{first_air_date}</div>
     </div>
   );
 };
